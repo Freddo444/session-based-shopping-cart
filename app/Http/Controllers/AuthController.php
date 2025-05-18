@@ -11,14 +11,5 @@ class AuthController extends Controller
     public function saveUser()
     {
 
-        $userName = 'Sano Fiston';
-        $userEmail = 'sanofiston04@gmail.com';
-
-        $session = session::push('user', [
-            'name' => $userName,
-            'email' => $userEmail,
-        ]);
-        dd(session::get('user'));
-        return view('index');
     }
 }
