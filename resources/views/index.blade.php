@@ -54,7 +54,6 @@
         section {
             width: 100%;
             height: 100vh;
-
         }
 
         .product-card {
@@ -126,6 +125,32 @@
             width: 100%;
             margin: 100px auto;
 
+        }
+        #about {
+            background-color: #f8f9fa;
+            padding: 50px 20px;
+            text-align: center;
+              margin-top: 40em;
+        }
+        #about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        #about p {
+            font-size: 20px;
+            margin-bottom: 30px;
+
+        }
+        #about .btn {
+            background-color: rgb(4, 67, 138);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        #about .btn:hover {
+            background-color: #0056b3;
+            transition: background-color 0.3s ease;
         }
     </style>
     <div class="home">
@@ -200,6 +225,14 @@
                     <a href="#" class="btn">View Details</a>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a leading e-commerce platform offering a wide range of products at competitive prices. Our mission
+                is to provide our customers with the best shopping experience possible.</p>
+            <a href="#" class="btn">Learn More</a>
         </div>
 
     </section>
