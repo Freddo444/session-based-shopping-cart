@@ -378,3 +378,41 @@ footer a {
     color: white;
     text-decoration: none;
 }
+.alert {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 70px 0;
+    z-index: 9999;
+    position:fixed;
+    width:100%;
+    text-align: center;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.alert h5{
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+.alert .close {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.alert .close:hover {
+    background-color: #721c24;
+    color: white;
+}
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\contactController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', [AuthController::class, 'index'])->name('index');
@@ -8,3 +9,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return view('index');
 });
+
+Route::post('/contact', [contactController::class, 'store'])->name('contact.store');

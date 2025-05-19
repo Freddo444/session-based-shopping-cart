@@ -1,6 +1,23 @@
 @extends('layouts.header')
 @section('content')
- 
+    @session('success')
+        <div class="alert alert-success">
+            <h5>{{ $value }}</h5>
+            <div class="close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    @endsession
+    @session('error')
+        <div class="alert alert-danger">
+            <h5>{{ $value }}</h5>
+        </div>
+    @endsession
+    @session('warning')
+        <div class="alert alert-warning">
+            <h5>{{ $value }}</h5>
+        </div>
+    @endsession
     <div class="home">
         <div class="home-content">
             <h1>Welcome to Our E-commerce Store</h1>
@@ -88,7 +105,7 @@
         <div class="container">
             <h2>Contact Us</h2>
             <div class="card">
-                <form action="" method="post">
+                <form action="{{ route('contact.store') }}" method="post">
                     @csrf
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -115,5 +132,11 @@
             <p>&copy; 2023 E-commerce Store. All rights reserved.</p>
         </div>
     </footer>
-
+    <script>
+        let alert = document.querySelector('.alert');
+        let close = document.querySelector('.close');
+        close.addEventListener('click', function() {
+            alert.style.display = 'none';
+        })
+    </script>
 @endsection
