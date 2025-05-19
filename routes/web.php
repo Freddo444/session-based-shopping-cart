@@ -6,5 +6,5 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', [AuthController::class, 'index'])->name('index');
 // Route::get('/',[AuthController::class, 'saveUser'])->name('save-user');
 Route::get('/', function(){
-    return view('layouts.header');
+    return view('index');
 });

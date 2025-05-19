@@ -29,45 +29,54 @@
         z-index: 9999;
         width: 100%;
     }
+
     .container .header .navbar {
         display: flex;
         align-items: center;
     }
+
     .container .header .navbar ul {
         list-style: none;
         display: flex;
         gap: 20px;
     }
+
     .container .header .navbar ul li {
         display: inline-block;
         padding: 20px;
     }
+
     .container .header .navbar ul li a {
         text-decoration: none;
         color: #333;
         font-size: 16px;
         text-transform: uppercase;
     }
+
     .container .header .navbar ul li a:hover {
-        background-color:rgb(4, 67, 138);
+        background-color: rgb(4, 67, 138);
         color: #fff;
         padding: 10px;
         border-radius: 5px;
     }
+
     .container .header .search-bar {
         display: flex;
         align-items: center;
     }
+
     .container .header .search-bar input[type="text"] {
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
         margin-right: 10px;
     }
+
     .container .header .search-bar input:focus {
         outline: none;
         border-color: rgb(4, 67, 138);
     }
+
     .container .header .search-bar button {
         padding: 10px 20px;
         background-color: rgb(4, 67, 138);
@@ -76,54 +85,64 @@
         border-radius: 5px;
         cursor: pointer;
     }
+
     .container .header .search-bar button:hover {
-        background-color:rgb(4, 67, 138);
+        background-color: rgb(4, 67, 138);
     }
+
     .container .header .cart {
         display: flex;
         align-items: center;
     }
+
     .container .header .cart a {
         text-decoration: none;
         color: #333;
         font-size: 16px;
         margin-left: 20px;
     }
+
     .container .header .cart a:hover {
         color: rgb(4, 67, 138);
     }
+
     .container .header .auth {
         display: flex;
         align-items: center;
     }
+
     .container .header .auth a {
         text-decoration: none;
         color: #333;
         font-size: 16px;
         margin-left: 20px;
     }
+
     .container .header .auth a:hover {
         color: rgb(4, 67, 138);
     }
+
     .container .header .auth a:first-child {
         background-color: rgb(4, 67, 138);
         color: white;
         padding: 10px 20px;
         border-radius: 5px;
     }
+
     .container .header .auth a:first-child:hover {
         background-color: rgb(4, 67, 138);
     }
+
     .container .header .auth a:last-child {
         background-color: rgb(4, 67, 138);
         color: white;
         padding: 10px 20px;
         border-radius: 5px;
     }
-    
 </style>
 
 <body>
+
     <div class="container">
         <div class="header">
             <div class="navbar">
@@ -150,6 +169,9 @@
                 @endif
             </div>
         </div>
+    </div>
+    <div class="content">
+        @yield('content')
     </div>
 </body>
 
