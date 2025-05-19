@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-family: "poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+}
+
+.container .header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.container .header .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.container .header .navbar ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.container .header .navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.container .header .navbar ul li a:hover {
+    background-color: rgb(4, 67, 138);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container .header .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.container .header .search-bar input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.container .header .search-bar input:focus {
+    outline: none;
+    border-color: rgb(4, 67, 138);
+}
+
+.container .header .search-bar button {
+    padding: 10px 20px;
+    background-color: rgb(4, 67, 138);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .header .search-bar button:hover {
+    background-color: rgb(4, 67, 138);
+}
+
+.container .header .cart {
+    display: flex;
+    align-items: center;
+}
+
+.container .header .cart a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.container .header .cart a:hover {
+    color: rgb(4, 67, 138);
+}
+
+.container .header .auth {
+    display: flex;
+    align-items: center;
+}
+
+.container .header .auth a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.container .header .auth a:hover {
+    color: rgb(4, 67, 138);
+}
+
+.container .header .auth a:first-child {
+    background-color: rgb(4, 67, 138);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.container .header .auth a:first-child:hover {
+    background-color: rgb(4, 67, 138);
+}
+
+.container .header .auth a:last-child {
+    background-color: rgb(4, 67, 138);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.home-content {
+    max-width: 50%;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.home-content .btn {
+    background-color: rgb(4, 67, 138);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.home-image {
+    max-width: 50%;
+}
+
+.home-image img {
+    margin-top: 3em;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.home-content .btn:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: calc(60% - 20px);
+    transform: translate(37%);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.product-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-card .btn {
+    background-color: rgb(4, 67, 138);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.product-card .btn:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 2.5em;
+    color: rgb(4, 67, 138);
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: rgb(4, 67, 138);
+    margin: 10px auto;
+}
+
+.product-card img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.product-grid {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin: 100px auto;
+}
+
+#about {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 40em;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#about .btn {
+    background-color: rgb(4, 67, 138);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#about .btn:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+#contact {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    text-align: center;
+}
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+#contact .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+#contact .card form {
+    display: flex;
+    flex-direction: column;
+}
+#contact .card form .form-group {
+    margin-bottom: 20px;
+}
+#contact .card form .form-group label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+#contact .card form .form-group input,
+#contact .card form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+#contact .card form .form-group input:focus,
+#contact .card form .form-group textarea:focus {
+    outline: none;
+    border-color: rgb(4, 67, 138);
+}
+#contact .card form .form-group button {
+    background-color: rgb(4, 67, 138);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+#contact .card form .form-group button:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+#contact .card form .form-group textarea {
+    resize: none;
+}
+#contact .card form .form-group input,
+#contact .card form .form-group textarea {
+    margin-top: 10px;
+}
+#contact .card form .form-group input[type="text"],
+#contact .card form .form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+#contact .card form .form-group input[type="text"]:focus,
+#contact .card form .form-group input[type="email"]:focus {
+    outline: none;
+    border-color: rgb(4, 67, 138);
+}
+#contact .card form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+footer {
+    background-color: rgb(4, 67, 138);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 2em;
+}
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
