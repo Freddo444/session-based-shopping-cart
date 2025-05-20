@@ -26,28 +26,34 @@
             flex: 1;
             margin-right: 20px;
         }
+
         .product-desc {
             flex: 2;
         }
+
         .product-name {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 10px;
         }
+
         .description {
             font-size: 16px;
             margin-bottom: 20px;
         }
+
         .product-price {
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 20px;
         }
-        a{
-            color:#fff;
+
+        a {
+            color: #fff;
             text-decoration: none;
         }
-        .cart {
+
+        .card-details .cart {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -58,9 +64,11 @@
             text-decoration: none;
             transition: background-color 0.3s;
         }
+
         .cart:hover {
             background-color: #0056b3;
         }
+
         .title h3 {
             text-align: center;
             margin-bottom: 20px;
@@ -68,6 +76,7 @@
             font-weight: bold;
             color: #333;
         }
+
         .product-img img {
             width: 100%;
             height: auto;
@@ -78,21 +87,10 @@
             border-radius: 10px;
             object-fit: cover;
         }
+
         .product-card p {
             font-size: 16px;
             margin-bottom: 20px;
-        }
-        .product-card a {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .product-card a:hover {
-            background-color: #0056b3;
         }
     </style>
     <div class="card">
@@ -110,9 +108,7 @@
                         <h3>Iphone 16Pro Max</h3>
                     </div>
                     <div class="description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. Quisquam,
-                            voluptatibus. Quisquam, voluptatibus. Quisquam, voluptatibus. Quisquam, voluptatibus.
-                            Quisquam, voluptatibus.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. Quisquam,voluptatibus. Quisquam, voluptatibus. Quisquam, voluptatibus. Quisquam, voluptatibus.Quisquam, voluptatibus.</p>
 
                     </div>
                     <div class="product-price">
@@ -125,8 +121,5 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="title">
-            <h2>Product Details</h2>
-        </div> --}}
     </div>
 @endsection
