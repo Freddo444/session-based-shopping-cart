@@ -1,5 +1,6 @@
 @extends('layouts.header')
 @section('content')
+
     @session('success')
         <div class="alert alert-success">
             <h5>{{ $value }}</h5>
@@ -22,7 +23,7 @@
         <div class="home-content">
             <h1>Welcome to Our E-commerce Store</h1>
             <p>Discover the best products at unbeatable prices.</p>
-            <a href="{{ route('view-product') }}" class="btn">Shop Now</a>
+            <a href="#" class="btn">Shop Now</a>
         </div>
         <div class="home-image">
             <img src="https://webandcrafts.com/_next/image?url=https%3A%2F%2Fadmin.wac.co%2Fuploads%2FWhat_is_E_commerce_and_What_are_its_Applications_2_d2eb0d4402.jpg&w=4500&q=90"
@@ -38,9 +39,17 @@
                         <img src="{{ $product->productImage }}" alt="{{ $product->productName }}">
                         <h3>{{ $product->productName }}</h3>
                         <p>{{ $product->productPrice }} {{ $product->currency }}</p>
-                        <a href="{{ route('view-product', $product->id) }}" class="btn">View Details</a>
+                        @if (Auth::check())
+                            <a href="{{ route('view-product', $product->id) }}" class="btn">View Details</a>
+                        @else
+                            <a href="#" class="btn"
+                                onclick="alert('Please login first before adding to cart!')">View Details</a>
+                        @endif
                     </div>
                 @endforeach
+            </div>
+            <div class="pagination">
+                {{ $products->links() }}
             </div>
         </div>
     </section>
