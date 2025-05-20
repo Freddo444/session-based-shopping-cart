@@ -33,62 +33,14 @@
         <div class="container">
             <h2>Featured Products</h2>
             <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
-                        alt="iphone 16 pro max">
-                    <h3>Iphone 16Pro Max</h3>
-                    <p>$1,500</p>
-                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
-                </div>
-                <div class="product-card">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
-                        alt="iphone 16 pro max">
-                    <h3>Iphone 16Pro Max</h3>
-                    <p>$1,500</p>
-                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
-                </div>
-                <div class="product-card">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
-                        alt="iphone 16 pro max">
-                    <h3>Iphone 16Pro Max</h3>
-                    <p>$1,500</p>
-                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
-                </div>
-                <div class="product-card">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
-                        alt="iphone 16 pro max">
-                    <h3>Iphone 16Pro Max</h3>
-                    <p>$1,500</p>
-                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
-                </div>
-                <div class="product-card">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
-                        alt="iphone 16 pro max">
-                    <h3>Iphone 16Pro Max</h3>
-                    <p>$1,500</p>
-                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
-                </div>
-                <div class="product-card">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
-                        alt="iphone 16 pro max">
-                    <h3>Iphone 16Pro Max</h3>
-                    <p>$1,500</p>
-                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
-                </div>
-                <div class="product-card">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
-                        alt="iphone 16 pro max">
-                    <h3>Iphone 16Pro Max</h3>
-                    <p>$1,500</p>
-                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
-                </div>
-                <div class="product-card">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
-                        alt="iphone 16 pro max">
-                    <h3>Iphone 16Pro Max</h3>
-                    <p>$1,500</p>
-                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
-                </div>
+                @foreach ($products as $product)
+                    <div class="product-card">
+                        <img src="{{ $product->productImage }}" alt="{{ $product->productName }}">
+                        <h3>{{ $product->productName }}</h3>
+                        <p>{{ $product->productPrice }} {{ $product->currency }}</p>
+                        <a href="{{ route('view-product', $product->id) }}" class="btn">View Details</a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -97,7 +49,7 @@
             <h2>About Us</h2>
             <p>We are a leading e-commerce platform offering a wide range of products at competitive prices. Our mission
                 is to provide our customers with the best shopping experience possible.</p>
-            <a href="{{ route('view-product') }}" class="btn">Learn More</a>
+            <a href="#" class="btn">Learn More</a>
         </div>
 
     </section>
@@ -127,7 +79,7 @@
         </div>
     </section>
 
-    
+
     <script>
         let alert = document.querySelector('.alert');
         let close = document.querySelector('.close');
