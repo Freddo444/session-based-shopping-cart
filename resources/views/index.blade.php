@@ -22,7 +22,7 @@
         <div class="home-content">
             <h1>Welcome to Our E-commerce Store</h1>
             <p>Discover the best products at unbeatable prices.</p>
-            <a href="#" class="btn">Shop Now</a>
+            <a href="{{ route('view-product') }}" class="btn">Shop Now</a>
         </div>
         <div class="home-image">
             <img src="https://webandcrafts.com/_next/image?url=https%3A%2F%2Fadmin.wac.co%2Fuploads%2FWhat_is_E_commerce_and_What_are_its_Applications_2_d2eb0d4402.jpg&w=4500&q=90"
@@ -38,56 +38,56 @@
                         alt="iphone 16 pro max">
                     <h3>Iphone 16Pro Max</h3>
                     <p>$1,500</p>
-                    <a href="#" class="btn">View Details</a>
+                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
                 </div>
                 <div class="product-card">
                     <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
                         alt="iphone 16 pro max">
                     <h3>Iphone 16Pro Max</h3>
                     <p>$1,500</p>
-                    <a href="#" class="btn">View Details</a>
+                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
                 </div>
                 <div class="product-card">
                     <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
                         alt="iphone 16 pro max">
                     <h3>Iphone 16Pro Max</h3>
                     <p>$1,500</p>
-                    <a href="#" class="btn">View Details</a>
+                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
                 </div>
                 <div class="product-card">
                     <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
                         alt="iphone 16 pro max">
                     <h3>Iphone 16Pro Max</h3>
                     <p>$1,500</p>
-                    <a href="#" class="btn">View Details</a>
+                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
                 </div>
                 <div class="product-card">
                     <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
                         alt="iphone 16 pro max">
                     <h3>Iphone 16Pro Max</h3>
                     <p>$1,500</p>
-                    <a href="#" class="btn">View Details</a>
+                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
                 </div>
                 <div class="product-card">
                     <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
                         alt="iphone 16 pro max">
                     <h3>Iphone 16Pro Max</h3>
                     <p>$1,500</p>
-                    <a href="#" class="btn">View Details</a>
+                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
                 </div>
                 <div class="product-card">
                     <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
                         alt="iphone 16 pro max">
                     <h3>Iphone 16Pro Max</h3>
                     <p>$1,500</p>
-                    <a href="#" class="btn">View Details</a>
+                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
                 </div>
                 <div class="product-card">
                     <img src="https://imageio.forbes.com/specials-images/imageserve/65034bdac9e8c78c1728ff0b/Apple-iPhone-15-Pro-lineup-natural-titanium-geo/960x0.jpg?height=711&width=711&fit=bounds"
                         alt="iphone 16 pro max">
                     <h3>Iphone 16Pro Max</h3>
                     <p>$1,500</p>
-                    <a href="#" class="btn">View Details</a>
+                    <a href="{{ route('view-product') }}" class="btn">View Details</a>
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
             <h2>About Us</h2>
             <p>We are a leading e-commerce platform offering a wide range of products at competitive prices. Our mission
                 is to provide our customers with the best shopping experience possible.</p>
-            <a href="#" class="btn">Learn More</a>
+            <a href="{{ route('view-product') }}" class="btn">Learn More</a>
         </div>
 
     </section>
@@ -127,11 +127,7 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 E-commerce Store. All rights reserved.</p>
-        </div>
-    </footer>
+    
     <script>
         let alert = document.querySelector('.alert');
         let close = document.querySelector('.close');

@@ -11,3 +11,6 @@ Route::get('/', function(){
 });
 
 Route::post('/contact', [contactController::class, 'store'])->name('contact.store');
+Route::get('view-product', function(){
+    return view('view');
+})->name('view-product');
