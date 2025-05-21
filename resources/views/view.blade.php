@@ -1,7 +1,6 @@
 @extends('layouts.header')
 
 @section('content')
-
     <div class="card">
         <div class="card-details">
             <div class="product-img">
@@ -23,11 +22,26 @@
                         <h3>Price: {{ $product->productPrice }} {{ $product->currency }}</h3>
                     </div>
                     <div class="cart">
-                        <a href="{{ route('add-cart',$product->id) }}"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
-                    </div>
 
+                        @if (Auth::check())
+                            <a href="{{ route('add-cart', $product->id) }}"><i class="fa-solid fa-cart-shopping"></i> Add to
+                                Cart</a>
+                        @else
+                             <a href="#" id="validUser"><i class="fa-solid fa-cart-shopping"></i> Add to
+                                Cart</a>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        let validUser = document.getElementById('validUser');
+        validUser.addEventListener('click', function(){
+            alert('Please login to add items to your cart');
+            window.location.href= "{{ route('index') }}";
+            return false;
+        })
+    </script>
 @endsection

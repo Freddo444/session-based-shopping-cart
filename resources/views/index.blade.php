@@ -39,12 +39,7 @@
                         <img src="{{ $product->productImage }}" alt="{{ $product->productName }}">
                         <h3>{{ $product->productName }}</h3>
                         <p>{{ $product->productPrice }} {{ $product->currency }}</p>
-                        @if (Auth::check())
-                            <a href="{{ route('view-product', $product->id) }}" class="btn">View Details</a>
-                        @else
-                            <a href="#" class="btn"
-                                onclick="alert('Please login first before adding to cart!')">View Details</a>
-                        @endif
+                        <a href="{{ route('view-product', $product->id) }}" class="btn">View Details</a>
                     </div>
                 @endforeach
             </div>
