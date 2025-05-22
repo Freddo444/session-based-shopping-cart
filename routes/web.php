@@ -17,4 +17,7 @@ Route::post('/add-cart/{id}', [CartControlller::class, 'addCart'])->name('add-ca
 Route::get('login', function () {
     return view('login');
 })->name('login');
+Route::get('register', function(){
+    return view('register');
+})->name('register');
 Route::post('login', [AuthController::class, 'login'])->name('login.auth');

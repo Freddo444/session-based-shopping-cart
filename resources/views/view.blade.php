@@ -40,7 +40,7 @@
         let validUser = document.getElementById('validUser');
         validUser.addEventListener('click', function(){
             alert('Please login to add items to your cart');
-            window.location.href= "{{ route('index') }}";
+            window.location.href= "{{ route('login') }}";
             return false;
         })
     </script>

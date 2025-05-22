@@ -25,11 +25,11 @@
                     <input type="password" id="password" name="password" required>
                 </div>
                 <div class="btn">
-                    <button type="submit" class="btn">Login</button>
+                    <button type="submit" class="btn">Register</button>
                 </div>
             </form>
             <div class="register">
-                <p>Don't have an account? <a href="{{ route('register') }}">Register here</a></p>
+                <p>Do you have an account? <a href="{{ route('login') }}">Login here</a></p>
             </div>
         </div>
     </div>
