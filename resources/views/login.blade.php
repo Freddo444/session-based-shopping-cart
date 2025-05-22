@@ -7,6 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login Page</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'poppins', sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        margin: 100px auto;
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 20px;
+        width: 400px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
 
 <body>
     <div class="container">
