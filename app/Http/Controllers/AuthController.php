@@ -19,7 +19,7 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-           return redirect()->route('index')->with('success', 'Login successful');
+            return redirect()->route('index')->with('success', 'Login successful');
         } else {
             return redirect()->back()->with('error', 'Invalid credentials');
         };
@@ -47,5 +47,11 @@ class AuthController extends Controller
         } else {
             return redirect()->back()->with('error', 'Registration failed');
         }
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return redirect()->route('index')->with('success', 'Logout successful');
     }
 }

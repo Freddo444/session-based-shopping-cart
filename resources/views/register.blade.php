@@ -172,6 +172,7 @@
             </form>
             <div class="register">
                 <p>Do you have an account? <a href="{{ route('login') }}">Login here</a></p>
+                <p><a href="{{ route('index') }}">Back To Home</a></p>
             </div>
         </div>
     </div>

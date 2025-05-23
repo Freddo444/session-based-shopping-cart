@@ -32,10 +32,10 @@
             </div>
             <div class="auth">
                 @if (Auth::check())
-                    <a href="">Logout</a>
+                    <a href="{{ route('logout') }}">Logout</a>
                 @else
-                    <a href="">Login</a>
-                    <a href="">Register</a>
+                    <a href="{{ route('login') }}">Login</a>
+                    <a href="{{ route('register') }}">Register</a>
                 @endif
             </div>
         </div>

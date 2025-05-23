@@ -27,7 +27,7 @@
                             <a href="{{ route('add-cart', $product->id) }}"><i class="fa-solid fa-cart-shopping"></i> Add to
                                 Cart</a>
                         @else
-                             <a href="#" id="validUser"><i class="fa-solid fa-cart-shopping"></i> Add to
+                             <a href="#" id="validUser" onclick="alert('Please login to add cart'); window.location.href='{{ route('login') }}'; return false"><i class="fa-solid fa-cart-shopping"></i> Add to
                                 Cart</a>
                         @endif
                     </div>
@@ -37,11 +37,11 @@
     </div>
 
     <script>
-        let validUser = document.getElementById('validUser');
-        validUser.addEventListener('click', function(){
-            alert('Please login to add items to your cart');
-            window.location.href= "{{ route('login') }}";
-            return false;
-        })
+        // let validUser = document.getElementById('validUser');
+        // validUser.addEventListener('click', function(){
+        //     alert('Please login to add items to your cart');
+        //     window.location.href= "{{ route('login') }}";
+        //     return false;
+        // })
     </script>
 @endsection

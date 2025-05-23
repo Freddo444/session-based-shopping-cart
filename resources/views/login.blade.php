@@ -165,6 +165,7 @@
             </form>
             <div class="register">
                 <p>Don't have an account? <a href="{{ route('register') }}">Register here</a></p>
+                <p><a href="{{ route('index') }}">Back To Home</a></p>
             </div>
         </div>
     </div>
