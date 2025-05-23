@@ -100,15 +100,55 @@
     .form-group input::placeholder {
         color: #999;
     }
+
+    .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+
+    .alert-success {
+        background-color: #4CAF50;
+    }
+
+    .alert-danger {
+        background-color: #f44336;
+    }
+
+    .close {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+    }
 </style>
 
 <body>
+
+    @session('success')
+        <div class="alert alert-success">
+            <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ session('success') }}
+        </div>
+    @endsession
+    @session('error')
+        <div class="alert alert-danger">
+            <span class="close" onclick="this.parentElement.display='none';">&times;</span>
+            {{ session('error') }}
+        </div>
+    @endsession
+
     <div class="container">
         <div class="form-group">
             <div class="title">
                 <h3>Register Form</h3>
             </div>
-            <form action="{{ route('login.auth') }}" method="post">
+            <form action="{{ route('register.auth') }}" method="post">
                 @csrf
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -123,8 +163,8 @@
                     <input type="password" id="password" name="password" required>
                 </div>
                 <div class="form-group">
-                    <label for="confirm_password">Repeat Password</label>
-                    <input type="password" id="confirm_password" name="confirm_password" required>
+                    <label for="password">Repeat Password</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" required>
                 </div>
                 <div class="btn">
                     <button type="submit" class="btn">Register</button>
