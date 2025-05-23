@@ -86,14 +86,14 @@
 }
 
 .container .header .cart a {
-    text-decoration: none;
+    /* text-decoration: none;
     color: #333;
     font-size: 16px;
-    margin-left: 20px;
+    margin-left: 20px; */
 }
 
 .container .header .cart a:hover {
-    color: rgb(4, 67, 138);
+    /* color: rgb(4, 67, 138); */
 }
 
 .container .header .auth {
