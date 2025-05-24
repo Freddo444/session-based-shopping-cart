@@ -13,7 +13,7 @@ Route::get('/', [ProductController::class, 'index'])->name('index');
 Route::post('/contact', [contactController::class, 'store'])->name('contact.store');
 Route::get('view-product/{id}', [ProductController::class, 'viewProducts'])->name('view-product');
 
-Route::get('/add-cart/{id}', [CartControlller::class, 'addCart'])->name('add-cart');
+Route::post('/add-cart/{id}', [CartControlller::class, 'addCart'])->name('add-cart');
 Route::get('login', function () {
     return view('login');
 })->name('login');

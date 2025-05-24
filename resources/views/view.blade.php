@@ -24,10 +24,21 @@
                     <div class="cart">
 
                         @if (Auth::check())
-                            <a href="{{ route('add-cart', $product->id) }}"><i class="fa-solid fa-cart-shopping"></i> Add to
-                                Cart</a>
+                            <form action="{{ route('add-cart', $product->id) }}" method="post">
+                                @csrf
+                                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                <input type="hidden" name="product_name" value="{{ $product->productName }}">
+                                <input type="hidden" name="product_price" value="{{ $product->productPrice }}">
+                                <input type="hidden" name="product_image" value="{{ $product->productImage }}">
+                                <input type="hidden" name="currency" value="{{ $product->currency }}">
+                                <input type="hidden" name="quantity" value="1">
+                                <button type="submit" class="btn"><i class="fa-solid fa-cart-shopping"></i> Add to
+                                    Cart</button>
+                            </form>
                         @else
-                             <a href="#" id="validUser" onclick="alert('Please login to add cart'); window.location.href='{{ route('login') }}'; return false"><i class="fa-solid fa-cart-shopping"></i> Add to
+                            <a href="#" id="validUser"
+                                onclick="alert('Please login to add cart'); window.location.href='{{ route('login') }}'; return false"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add to
                                 Cart</a>
                         @endif
                     </div>

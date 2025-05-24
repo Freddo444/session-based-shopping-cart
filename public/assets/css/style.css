@@ -535,3 +535,9 @@ a {
     top: -10px;
     left: -5px;
 }
+.cart button {
+    background: transparent !important;
+    border: none !important;
+    color: #fff !important;
+    cursor: pointer !important;
+}
