@@ -525,3 +525,13 @@ a {
 .pagination a:hover {
     background-color: #0056b3;
 }
+.cart span {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-size: 12px;
+    position: relative;
+    top: -10px;
+    left: -5px;
+}

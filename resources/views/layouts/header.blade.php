@@ -11,6 +11,7 @@
     <title>{{ ENV('APP_NAME') }}</title>
 </head>
 
+
 <body>
 
     <div class="container">
@@ -28,7 +29,10 @@
                 <button type="submit">Search</button>
             </div>
             <div class="cart">
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart (0)</a>
+                @session('cart')
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart <span>
+                            {{ count(session('cart')) }}</span></a>
+                @endsession
             </div>
             <div class="auth">
                 @if (Auth::check())

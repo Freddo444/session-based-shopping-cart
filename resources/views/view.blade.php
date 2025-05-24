@@ -19,7 +19,7 @@
 
                     </div>
                     <div class="product-price">
-                        <h3>Price: {{ $product->productPrice }} {{ $product->currency }}</h3>
+                        <h3>Price: {{ Number_format($product->productPrice) }} {{ $product->currency }}</h3>
                     </div>
                     <div class="cart">
 

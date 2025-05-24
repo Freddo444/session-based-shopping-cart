@@ -13,7 +13,7 @@ Route::get('/', [ProductController::class, 'index'])->name('index');
 Route::post('/contact', [contactController::class, 'store'])->name('contact.store');
 Route::get('view-product/{id}', [ProductController::class, 'viewProducts'])->name('view-product');
 
-Route::post('/add-cart/{id}', [CartControlller::class, 'addCart'])->name('add-cart');
+Route::get('/add-cart/{id}', [CartControlller::class, 'addCart'])->name('add-cart');
 Route::get('login', function () {
     return view('login');
 })->name('login');
@@ -24,3 +24,5 @@ Route::post('register', [AuthController::class, 'register'])->name('register.aut
 Route::post('/login-user', [AuthController::class, 'login'])->name('login.auth');
 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+

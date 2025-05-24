@@ -38,7 +38,7 @@
                     <div class="product-card">
                         <img src="{{ $product->productImage }}" alt="{{ $product->productName }}">
                         <h3>{{ $product->productName }}</h3>
-                        <p>{{ $product->productPrice }} {{ $product->currency }}</p>
+                        <p>{{ Number_format($product->productPrice) }} {{ $product->currency }}</p>
                         <a href="{{ route('view-product', $product->id) }}" class="btn">View Details</a>
                     </div>
                 @endforeach
