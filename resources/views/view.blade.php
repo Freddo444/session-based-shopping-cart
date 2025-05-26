@@ -58,19 +58,20 @@
                     <tbody>
 
                         @if (session('cart') && count(session('cart')) > 0)
-                            @foreach (session('cart') as $item)
+                            @foreach (session('cart') as $key => $item)
                                 <tr>
                                     <td>{{ $item['product_name'] }}</td>
                                     <td>{{ number_format($item['product_price']) }}</td>
                                     <td>{{ $item['currency'] }}</td>
                                     <td>{{ $item['product_image'] }}</td>
                                     <td>{{ $item['quantity'] }}</td>
-
-                                    <form action="{{ route('deleteCart') }}" method="post">
-                                        @csrf
-                                        <input type="text" name="product_id" value="{{ $item['id'] }}">
-                                        <td><button type="submit" class="cancel-cart">&times;</button></td>
-                                    </form>
+                                    <td>
+                                        <form action="{{ route('deleteCart') }}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="product_id" value="{{ $key }}">
+                                            <input type="submit" value="Remove" class="btn">
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         @else
