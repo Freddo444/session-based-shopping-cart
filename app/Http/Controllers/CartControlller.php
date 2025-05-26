@@ -15,6 +15,7 @@ class CartControlller extends Controller
             'currency' => 'required|string|max:10',
             'quantity' => 'required|integer|min:1'
         ]);
+        
         $cart = session()->get('cart', []);
 
         if (isset($cart[$id])) {
@@ -22,10 +23,10 @@ class CartControlller extends Controller
         } else {
             $cart[$id] = [
                 'id' => $id,
-                "product_name" => $request->name,
+                "product_name" => $request->product_name,
                 "quantity" => $request->quantity,
-                "product_price" => $request->price,
-                "product_image" => $request->image,
+                "product_price" => $request->product_price,
+                "product_image" => $request->product_image,
                 "currency" => $request->currency
             ];
         }
