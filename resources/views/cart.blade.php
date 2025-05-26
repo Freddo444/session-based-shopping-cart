@@ -60,8 +60,18 @@
             </table>
 
             <div class="cart-total">
-                {{-- <h3>Total: {{ number_format(array_sum(array_column(session('cart'), 'product_price'))) }}
-                    {{ session('cart')[0]['currency'] }}</h3> --}}
+                @php
+                    $total = 0;
+                    $cart = session('cart', []);
+
+                    foreach ($cart as $item) {
+                        $total += $item['product_price'] * $item['quantity'];
+                    }
+                @endphp
+
+                <h3>Total: {{ number_format($total, 2) }} {{ $cart ? $cart[array_key_first($cart)]['currency'] : '' }}
+                </h3>
+
                 <form action="#" method="post">
                     @csrf
                     <button type="submit" class="btn">Checkout</button>
