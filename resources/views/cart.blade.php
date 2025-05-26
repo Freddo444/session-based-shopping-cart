@@ -1,65 +1,30 @@
-@extends('layouts.header')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
-    <style>
-        .cart-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <title>Cart</title>
+</head>
 
-        .cart-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+<body>
+    @session('success')
+        <div class="alert alert-success">
+            <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ session('success') }}
+        </div>
+    @endsession
 
-        .cart-container table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .cart-container th,
-        .cart-container td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .cart-container th {
-            background-color: #f4f4f4;
-        }
-
-        .cart-container img {
-            max-width: 50px;
-            height: auto;
-        }
-
-        .cart-total {
-            text-align: right;
-            margin-top: 20px;
-        }
-
-        .btn {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-
-        .back-to-products {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+    @session('error')
+        <div class="alert alert-danger">
+            <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ session('error') }}
+        </div>
+    @endsession
     <div class="cart-container">
         <h2>Your Cart</h2>
         @if (session('cart') && count(session('cart')) > 0)
@@ -78,7 +43,9 @@
                         <tr>
                             <td>{{ $item['product_name'] }}</td>
                             <td>{{ number_format($item['product_price']) }} {{ $item['currency'] }}</td>
-                            <td><img src="{{ $item['product_image'] }}" alt="{{ $item['product_name'] }}" width="50"></td>
+                            <td><img src="{{ $item['product_image'] }}" alt="{{ $item['product_name'] }}"
+                                    width="50">
+                            </td>
                             <td>{{ $item['quantity'] }}</td>
                             <td>
                                 <form action="{{ route('deleteCart') }}" method="post">
@@ -93,9 +60,9 @@
             </table>
 
             <div class="cart-total">
-                <h3>Total: {{ number_format(array_sum(array_column(session('cart'), 'product_price'))) }}
-                    {{ session('cart')[0]['currency'] }}</h3>
-                <form action="{{ route('checkout') }}" method="post">
+                {{-- <h3>Total: {{ number_format(array_sum(array_column(session('cart'), 'product_price'))) }}
+                    {{ session('cart')[0]['currency'] }}</h3> --}}
+                <form action="#" method="post">
                     @csrf
                     <button type="submit" class="btn">Checkout</button>
                 </form>
@@ -109,3 +76,6 @@
 
         </div>
     </div>
+</body>
+
+</html>

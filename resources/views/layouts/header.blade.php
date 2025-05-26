@@ -29,10 +29,9 @@
                 <button type="submit">Search</button>
             </div>
             <div class="cart">
-                {{-- @session('cart') --}}
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart <span>
+                <a href="{{ route('cart') }}"><i class="fa-solid fa-cart-shopping"></i> Cart <span>
                         {{ session('cart') ? count(session('cart')) : 0 }}</span></a>
-                {{-- @endsession --}}
+
             </div>
             <div class="auth">
                 @if (Auth::check())
