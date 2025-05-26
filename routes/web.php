@@ -24,5 +24,6 @@ Route::post('register', [AuthController::class, 'register'])->name('register.aut
 Route::post('/login-user', [AuthController::class, 'login'])->name('login.auth');
 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('delete-cart', [CartControlller::class, 'deleteCart'])->name('deleteCart');
 
 
