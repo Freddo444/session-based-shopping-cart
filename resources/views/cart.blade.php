@@ -69,7 +69,7 @@
                     }
                 @endphp
 
-                <h3>Total: {{ number_format($total, 2) }} {{ $cart ? $cart[array_key_first($cart)]['currency'] : '' }}
+                <h3>Total: {{ number_format($total) }} {{ $cart[array_key_first($cart)]['currency'] }}
                 </h3>
 
                 <form action="#" method="post">
