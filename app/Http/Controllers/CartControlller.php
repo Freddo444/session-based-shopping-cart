@@ -10,7 +10,7 @@ class CartControlller extends Controller
     {
         $request->validate([
             'product_name' => 'required|string|max:255',
-            'product_price' => 'required|numeric|min:0',
+            'product_price' => 'required|numeric',
             'product_image' => 'required|url',
             'currency' => 'required|string|max:10',
             'quantity' => 'required|integer|min:1'
