@@ -17,7 +17,7 @@ Route::post('/add-cart/{id}', [CartControlller::class, 'addCart'])->name('add-ca
 Route::get('login', function () {
     return view('login');
 })->name('login');
-Route::get('register', function(){
+Route::get('register', function () {
     return view('register');
 })->name('register');
 Route::post('register', [AuthController::class, 'register'])->name('register.auth');
@@ -26,4 +26,9 @@ Route::post('/login-user', [AuthController::class, 'login'])->name('login.auth')
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('delete-cart', [CartControlller::class, 'deleteCart'])->name('deleteCart');
 
-
+Route::get('cart', function () {
+    return view('cart');
+})->name('cart');
+// Route::get('checkout', function () {
+//     return view('checkout');
+// })->name('checkout');
