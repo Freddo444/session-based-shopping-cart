@@ -35,22 +35,6 @@ class CartControlller extends Controller
     }
 
 
-    // public function deleteCart(Request $request)
-    // {
-    //     $productId = $request->validate([
-    //         'product_id' => 'required|integer|exists:products,id'
-    //     ]);
-
-    //     $cart = session()->get('cart', []);
-
-    //     if (isset($cart[$productId['product_id']])) {
-    //         unset($cart[$productId['product_id']]);
-    //         session()->put('cart', $cart);
-    //     }
-
-    //     return redirect()->back()->with('success', 'Product removed from cart successfully');
-    // }
-
 
     public function deleteCart(Request $request)
     {

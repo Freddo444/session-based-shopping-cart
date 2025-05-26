@@ -44,44 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="cart-display">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Price</th>
-                            <th>Image</th>
-                            <th>Quantity</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        @if (session('cart') && count(session('cart')) > 0)
-                            @foreach (session('cart') as $key => $item)
-                                <tr>
-                                    <td>{{ $item['product_name'] }}</td>
-                                    <td>{{ number_format($item['product_price']) }}</td>
-                                    <td>{{ $item['currency'] }}</td>
-                                    <td>{{ $item['product_image'] }}</td>
-                                    <td>{{ $item['quantity'] }}</td>
-                                    <td>
-                                        <form action="{{ route('deleteCart') }}" method="post">
-                                            @csrf
-                                            <input type="hidden" name="product_id" value="{{ $key }}">
-                                            <input type="submit" value="Remove" class="btn">
-                                        </form>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        @else
-                            <tr>
-                                <td colspan="4" style="text-align: center">No Item in Cart</td>
-                            </tr>
-                        @endif
-                    </tbody>
-                </table>
-            </div>
+            
         </div>
     </div>
 
