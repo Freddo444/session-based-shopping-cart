@@ -29,6 +29,7 @@ Route::post('delete-cart', [CartControlller::class, 'deleteCart'])->name('delete
 Route::get('cart', function () {
     return view('cart');
 })->name('cart');
-// Route::get('checkout', function () {
-//     return view('checkout');
-// })->name('checkout');
+Route::get('/admin', function () {
+    return view('admin');
+});
+
