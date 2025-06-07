@@ -36,7 +36,7 @@
             <div class="col-md-3 bg-light" style="height: 100vh;left: 0; top: 0;">
                 <h2 class="" style="border-bottom: 1px solid #ddd; padding: 20px;">Admin Dashboard</h2>
                 <ul class="list-group">
-                    <li class=""><a href="#">Manage Products</a></li>
+                    <li class=""><a href="{{ route('view-product') }}">Manage Products</a></li>
                     <li class=""><a href="#">Manage Orders</a></li>
                     <li class=""><a href="#">Manage Users</a></li>
                     <li class=""><a href="#">Settings</a></li>
