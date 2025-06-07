@@ -33,3 +33,6 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
+Route::get('view-product', function () {
+    return view('view-product');
+})->name('view-product');
