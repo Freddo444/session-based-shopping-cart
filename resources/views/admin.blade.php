@@ -13,20 +13,33 @@
 </head>
 
 <style>
+    a {
+        text-decoration: none;
+        color: black;
+    }
 
+    a:hover {
+    color: #007bff;
+    }
+    ul li{
+        border: none;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        transition: background-color 0.3s;
+    }
 </style>
 
 <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3 bg-light" style="height: 100vh;left: 0; top: 0;">
-                <h2>Admin Dashboard</h2>
+                <h2 class="" style="border-bottom: 1px solid #ddd; padding: 20px;">Admin Dashboard</h2>
                 <ul class="list-group">
-                    <li class="list-group-item"><a href="#">Manage Products</a></li>
-                    <li class="list-group-item"><a href="#">Manage Orders</a></li>
-                    <li class="list-group-item"><a href="#">Manage Users</a></li>
-                    <li class="list-group-item"><a href="#">Settings</a></li>
-                    <li class="list-group-item"><a href="#">Logout</a></li>
+                    <li class=""><a href="#">Manage Products</a></li>
+                    <li class=""><a href="#">Manage Orders</a></li>
+                    <li class=""><a href="#">Manage Users</a></li>
+                    <li class=""><a href="#">Settings</a></li>
+                    <li class=""><a href="#">Logout</a></li>
                 </ul>
             </div>
             <div class="col-md-9 p-5">
