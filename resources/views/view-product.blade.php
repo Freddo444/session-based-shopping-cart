@@ -2,5 +2,9 @@
 
 
 @section('content')
+<div class="container">
+    <div class="title">
 
+    </div>
+</div>
 @endsection
