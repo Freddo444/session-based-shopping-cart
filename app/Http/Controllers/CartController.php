@@ -38,7 +38,7 @@ class CartController extends Controller
         Session::put('cart', $cart);
 
         // Optional: Fire event
-        // event(new ProductAddedToCart($id, $validated['quantity']));
+         event(new ProductAddedToCart($id, $validated['quantity']));
 
         return redirect()->back()->with('success', 'Product added to cart successfully.');
     }
@@ -56,7 +56,7 @@ class CartController extends Controller
             Session::put('cart', $cart);
 
             // Optional: Fire event
-            // event(new ProductUpdatedInCart($id, $validated['quantity']));
+            event(new ProductUpdatedInCart($id, $validated['quantity']));
 
             return redirect()->back()->with('success', 'Cart updated successfully.');
         }
@@ -78,7 +78,7 @@ class CartController extends Controller
             Session::put('cart', $cart);
 
             // Optional: Fire event
-            // event(new ProductRemovedFromCart($id));
+            event(new ProductRemovedFromCart($id));
         }
 
         return redirect()->back()->with('success', 'Product removed from cart successfully.');
